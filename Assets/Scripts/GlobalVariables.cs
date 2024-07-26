@@ -2,24 +2,24 @@ using UnityEngine;
 
 public class GlobalVariables : MonoBehaviour
 {
-    // ƒvƒ‰ƒCƒx[ƒg•Ï”
+    // ï¿½vï¿½ï¿½ï¿½Cï¿½xï¿½[ï¿½gï¿½Ïï¿½
     private static bool _isFirst = false;
     private static bool _isSecond = false;
     private static bool _isThird = false;
     private static bool _isClear = false;
 
-    // ‹¤’Ê‚Ìƒƒ\ƒbƒh
+    // ï¿½ï¿½ï¿½Ê‚Ìƒï¿½ï¿½\ï¿½bï¿½h
     private static void SetValue(ref bool field, bool value, string fieldName)
     {
         if (field != value)
         {
             field = value;
             Debug.Log(fieldName + ": " + field);
-            PrintTrueCount(); // •ÏX‚ª‚ ‚Á‚½‚Æ‚«‚Étrue‚Ì”‚ğo—Í
+            PrintTrueCount(); // ï¿½ÏXï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½trueï¿½Ìï¿½ï¿½ï¿½ï¿½oï¿½ï¿½
         }
     }
 
-    // ƒvƒƒpƒeƒB‚ğg—p‚µ‚Ä•Ï”‚Ì•ÏX‚ğŠÄ‹
+    // ï¿½vï¿½ï¿½ï¿½pï¿½eï¿½Bï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Ä•Ïï¿½ï¿½Ì•ÏXï¿½ï¿½ï¿½Äï¿½
     public static bool isFirst
     {
         get { return _isFirst; }
@@ -51,7 +51,7 @@ public class GlobalVariables : MonoBehaviour
         }
     }
 
-    // true‚Ì”‚ğƒJƒEƒ“ƒg‚µ‚ÄƒRƒ“ƒ\[ƒ‹‚Éo—Í‚·‚éƒƒ\ƒbƒh
+    // trueï¿½Ìï¿½ï¿½ï¿½ï¿½Jï¿½Eï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ÄƒRï¿½ï¿½ï¿½\ï¿½[ï¿½ï¿½ï¿½Éoï¿½Í‚ï¿½ï¿½éƒï¿½\ï¿½bï¿½h
     public static void PrintTrueCount()
     {
         int trueCount = 0;
@@ -60,13 +60,13 @@ public class GlobalVariables : MonoBehaviour
         if (_isSecond) trueCount++;
         if (_isThird) trueCount++;
 
-        Debug.Log("Œ»İ‰ğ‚¢‚½“ä‚Ì”: " + trueCount);
+        Debug.Log("ï¿½ï¿½ï¿½İ‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½: " + trueCount);
 
-        // true‚Ì”‚ª3ˆÈã‚È‚çƒQ[ƒ€ƒNƒŠƒA
+        // trueï¿½Ìï¿½ï¿½ï¿½3ï¿½Èï¿½È‚ï¿½Qï¿½[ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½A
         if (trueCount >= 3)
         {
             isClear = true;
-            Debug.Log("ƒQ[ƒ€ƒNƒŠƒA");
+            Debug.Log("ï¿½Qï¿½[ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½A");
         }
         else
         {
@@ -76,10 +76,10 @@ public class GlobalVariables : MonoBehaviour
 
     void Start()
     {
-        // ‰Šú‰»‚âƒfƒoƒbƒO—p‚ÌƒR[ƒh‚ğ‘‚­‚±‚Æ‚ª‚Å‚«‚Ü‚·
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½oï¿½bï¿½Oï¿½pï¿½ÌƒRï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½
         Debug.Log("isFirst: " + isFirst);
         Debug.Log("isSecond: " + isSecond);
         Debug.Log("isThird: " + isThird);
-        PrintTrueCount(); // ‰Šúó‘Ô‚Ìtrue‚Ì”‚ğo—Í
+        PrintTrueCount(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô‚ï¿½trueï¿½Ìï¿½ï¿½ï¿½ï¿½oï¿½ï¿½
     }
 }

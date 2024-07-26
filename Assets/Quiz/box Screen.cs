@@ -6,6 +6,13 @@ using TMPro;
 //Screenの内容を変化させるためのスクリプト
 public class boxScreen : MonoBehaviour
 {
+    
+    //答えの数値を入力する変数
+    [SerializeField] string answerNumber;
+
+    [SerializeField] bool firstQuestion;
+    [SerializeField] bool secondQuestion;
+
 
     private TextMeshProUGUI tmpText;
 
@@ -25,6 +32,22 @@ public class boxScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (tmpText != null)
+        {
+            // 表示されているテキストがanswerNumberと一致するかをチェック
+            if (tmpText.text == answerNumber)
+            {
+                if(firstQuestion == true)
+                {
+                    // 一致した場合の処理
+                    //Debug.Log("表示されているテキストがanswerNumberと一致しました。");
+                    GlobalVariables.isFirst = true;
+                }
+                if(secondQuestion == true)
+                {
+                    GlobalVariables.isSecond = true;
+                }
+            }
+        }
     }
 }
