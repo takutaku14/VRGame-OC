@@ -3,7 +3,7 @@ using UnityEngine;
 public class SecondLightController : MonoBehaviour
 {
     private Light pointLight;
-    private float timer = 0f;
+    private bool isRed = true;
 
     void Start()
     {
@@ -16,33 +16,31 @@ public class SecondLightController : MonoBehaviour
         }
 
         // 初期色の設定
-        UpdateLightColor();
+        pointLight.color = Color.red; // 初期色を赤に設定
     }
 
     void Update()
     {
-        // タイマーの更新
-        timer += Time.deltaTime;
-
-        // 2秒ごとにisSecondを切り替える
-        if (timer >= 2f)
+        // Sキーが押されたら色を切り替え、グローバル変数を更新する
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            GlobalVariables.isSecond = !GlobalVariables.isSecond;
+            isRed = !isRed;
             UpdateLightColor();
-            timer = 0f;
         }
     }
 
     void UpdateLightColor()
     {
-        // isSecondの値に応じてライトの色を変更
-        if (GlobalVariables.isSecond)
+        // isRedの値に応じてライトの色を変更
+        if (isRed)
         {
-            pointLight.color = Color.green; // エメラルドグリーン
+            pointLight.color = Color.red; // 赤色
+            GlobalVariables.isSecond = false; // 赤色に変更した場合はisSecondをfalseにする
         }
         else
         {
-            pointLight.color = Color.red; // 赤色
+            pointLight.color = new Color(0.31f, 0.78f, 0.47f); // エメラルドグリーン
+            GlobalVariables.isSecond = true; // エメラルドグリーンに変更した場合はisSecondをtrueにする
         }
     }
 }
