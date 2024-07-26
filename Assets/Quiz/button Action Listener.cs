@@ -14,12 +14,17 @@ public class buttonActionListener : MonoBehaviour
     //現在の表示内容(staticだから共有されてる…？)←不安
     private static string currentDisplay = "";
 
-    public void OnButtonClick()
+    //物体同士がぶつかったときに呼ばれる。
+    void OnCollisionEnter(Collision collision)
     {
-        if (currentDisplay.Length < 4)
+        //プレイヤータグのついたものに衝突した際になるように設定。
+        if (collision.gameObject.CompareTag("Player"))
         {
-            currentDisplay += buttonNumber;
-            displayText.text = currentDisplay;
+            if (currentDisplay.Length < 4)
+            {
+                currentDisplay += buttonNumber;
+                displayText.text = currentDisplay;
+            }
         }
     }
     

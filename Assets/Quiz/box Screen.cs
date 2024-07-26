@@ -16,7 +16,8 @@ public class boxScreen : MonoBehaviour
         tmpText = gameObject.GetComponent<TextMeshProUGUI>();
         if (tmpText != null)
         {
-            tmpText.text = "*  *  *  *";
+            //初期の表示内容を書いても良い
+            tmpText.text = "";
             //Debug.Log("TextMeshProUGUIコンポーネントが正常に取得されました。");
         }
     }
