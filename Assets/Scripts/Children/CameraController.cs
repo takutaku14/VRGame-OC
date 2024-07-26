@@ -21,10 +21,6 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        // 入力の取得
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
         // 回転が完了していない場合は、回転処理を行う
         if (isRotating)
         {
@@ -82,6 +78,27 @@ public class CameraController : MonoBehaviour
             targetRotation = Quaternion.identity;
             isVerticalRotation = false;
             isRotating = true;
+        }
+
+        // 入力の取得（↑↓←→キー）
+        float horizontal = 0f;
+        float vertical = 0f;
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            vertical = 1f;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            vertical = -1f;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            horizontal = -1f;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            horizontal = 1f;
         }
 
         // 移動の計算
