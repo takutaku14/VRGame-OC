@@ -14,19 +14,8 @@ public class CheckWall : MonoBehaviour
                 GameManager.Instance.GameClear();
             }
 
-            TeleportRoom(other.gameObject);
+            tp.TeleportRoom(other.gameObject);  //gameObject‚ğtpæ‚ÉˆÚ“®‚³‚¹‚éB
             Debug.Log(GameManager.Instance.STATUS);
         }
-    }
-
-    public void TeleportRoom(GameObject player) {
-        CharacterController cc = player.GetComponent<CharacterController>();
-
-        cc.enabled = false;
-        float x = tp.GetX();
-        float y = player.transform.position.y;
-        float z = tp.GetZ();
-        player.transform.position = new Vector3(x, y, z);
-        cc.enabled = true;
     }
 }

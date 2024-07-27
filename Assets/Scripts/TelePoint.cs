@@ -10,6 +10,17 @@ public class TelePoint : MonoBehaviour {
         z = transform.position.z;
     }
 
-    public float GetX() { return x; }
-    public float GetZ() { return z; }
+    public void TeleportRoom(GameObject player) {
+        CharacterController cc = player.GetComponent<CharacterController>();
+
+        if (cc != null) {
+            cc.enabled = false;
+            float y = player.transform.position.y;
+            player.transform.position = new Vector3(x, y, z);
+            cc.enabled = true;
+        }
+    }
+
+    // public float GetX() { return x; }
+    // public float GetZ() { return z; }
 }
