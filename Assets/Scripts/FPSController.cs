@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class FPSController : MonoBehaviour {
-    float x, z;
     public float speed = 50f;
 
     public GameObject cam;
@@ -17,6 +16,7 @@ public class FPSController : MonoBehaviour {
     Vector3 movedir = Vector3.zero;
 
     bool dashing = false;
+    Vector3 initPos;
     //bool onGround = true;
 
     //変数の宣言(角度の制限用)
@@ -27,7 +27,7 @@ public class FPSController : MonoBehaviour {
         cameraRot = cam.transform.localRotation;
         characterRot = transform.localRotation;
         cc = gameObject.GetComponent<CharacterController>();
-
+        initPos = this.transform.localPosition;
     }
 
     // Update is called once per frame
@@ -57,6 +57,13 @@ public class FPSController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
             ChangeDash();
         }
+
+        //debug用
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            cc.enabled = false;
+            this.transform.localPosition = initPos;
+            cc.enabled = true;
+        }
     }
 
     private void ChangeDash() {
@@ -74,7 +81,6 @@ public class FPSController : MonoBehaviour {
 
 
         Vector3 globaldir = transform.TransformDirection(movedir);
-        Debug.Log(x+", "+z);
 
         if (dashing) {
             cc.Move(globaldir * Time.deltaTime * 2);
