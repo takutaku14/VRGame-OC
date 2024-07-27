@@ -54,6 +54,6 @@ public class GameManager : MonoBehaviour {
     public void GameOver() {
         status = GameStatus.gameOver;
 
-        //TODO ゲームオーバー処理既述
+        //TODO ゲームオーバー処理
     }
 }

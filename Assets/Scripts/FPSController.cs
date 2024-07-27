@@ -13,7 +13,9 @@ public class FPSController : MonoBehaviour {
 
     bool cursorLock = true;
 
-    Rigidbody rb;
+    CharacterController cc;
+    Vector3 movedir = Vector3.zero;
+
     bool dashing = false;
     //bool onGround = true;
 
@@ -24,7 +26,8 @@ public class FPSController : MonoBehaviour {
     void Start() {
         cameraRot = cam.transform.localRotation;
         characterRot = transform.localRotation;
-        rb = gameObject.GetComponent<Rigidbody>();
+        cc = gameObject.GetComponent<CharacterController>();
+
     }
 
     // Update is called once per frame
@@ -65,18 +68,18 @@ public class FPSController : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        x = 0;
-        z = 0;
 
-        x = Input.GetAxisRaw("Horizontal") * speed;  //A, D
-        z = Input.GetAxisRaw("Vertical") * speed;  //W, S
+        movedir.x = Input.GetAxisRaw("Horizontal") * speed;  //A, D
+        movedir.z = Input.GetAxisRaw("Vertical") * speed;  //W, S
 
+
+        Vector3 globaldir = transform.TransformDirection(movedir);
         Debug.Log(x+", "+z);
 
         if (dashing) {
-            rb.velocity = transform.forward * z * 2 + transform.right * x * 2;
+            cc.Move(globaldir * Time.deltaTime * 2);
         } else {
-            rb.velocity = rb.transform.forward * z + rb.transform.right * x;
+            cc.Move(globaldir * Time.deltaTime);
         }
 
     }
