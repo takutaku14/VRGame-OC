@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FPSController : MonoBehaviour {
     float x, z;
-    public float speed = 8f;
+    public float speed = 50f;
 
     public GameObject cam;
     Quaternion cameraRot, characterRot;
@@ -15,7 +15,7 @@ public class FPSController : MonoBehaviour {
 
     Rigidbody rb;
     bool dashing = false;
-    bool onGround = true;
+    //bool onGround = true;
 
     //変数の宣言(角度の制限用)
     float minX = -90f, maxX = 90f;
@@ -70,6 +70,8 @@ public class FPSController : MonoBehaviour {
 
         x = Input.GetAxisRaw("Horizontal") * speed;  //A, D
         z = Input.GetAxisRaw("Vertical") * speed;  //W, S
+
+        Debug.Log(x+", "+z);
 
         if (dashing) {
             rb.velocity = transform.forward * z * 2 + transform.right * x * 2;
