@@ -64,6 +64,12 @@ public class FPSController : MonoBehaviour {
             this.transform.localPosition = initPos;
             cc.enabled = true;
         }
+
+        //debug用
+        if (Input.GetKeyDown(KeyCode.M)) {
+            GameManager.Instance.SwitchMenu();
+            Debug.Log("Mが押された");
+        }
     }
 
     private void ChangeDash() {

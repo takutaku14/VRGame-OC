@@ -18,9 +18,16 @@ public class GameManager : MonoBehaviour {
     public GameStatus STATUS {
         get { return status; }
     }
+
+    [SerializeField]
+    private Menu menu;
+    public Menu MENU {
+        get { return menu; }
+    }
     private void Awake() {
         if (Instance == null) {
             Instance = this;
+            menu.GetComponent<Canvas>().enabled = false;
             DontDestroyOnLoad(this.gameObject);
         } else {
             Destroy(this.gameObject);
@@ -55,5 +62,16 @@ public class GameManager : MonoBehaviour {
         status = GameStatus.gameOver;
 
         //TODO ゲームオーバー処理
+    }
+
+    public void SwitchMenu() {
+        Canvas canvas = menu.GetComponent<Canvas>();
+        if(canvas.enabled == true) {
+            canvas.enabled = false;
+            Debug.Log("メニュー非表示");
+        }else {
+            canvas.enabled = true;
+            Debug.Log("メニュー表示");
+        }
     }
 }
