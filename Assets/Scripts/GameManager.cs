@@ -34,6 +34,10 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void Start() {
+
+    }
+
     public void InitGame() {
         //TODO 初期化処理
         status = GameStatus.first;
@@ -56,15 +60,19 @@ public class GameManager : MonoBehaviour {
         status = GameStatus.clear;
 
         //TODO クリア処理
+        ShowMenu();
+        menu.SwitchMenu(1);
     }
 
     public void GameOver() {
         status = GameStatus.gameOver;
 
         //TODO ゲームオーバー処理
+        ShowMenu();
+        menu.SwitchMenu(2);
     }
 
-    public void SwitchMenu() {
+    public void ShowMenu() {
         Canvas canvas = menu.GetComponent<Canvas>();
         if(canvas.enabled == true) {
             canvas.enabled = false;
