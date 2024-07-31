@@ -7,21 +7,21 @@ public class SecondLightController : MonoBehaviour
 
     void Start()
     {
-        // ƒ|ƒCƒ“ƒgƒ‰ƒCƒgƒRƒ“ƒ|[ƒlƒ“ƒg‚Ìæ“¾
+        // ãƒã‚¤ãƒ³ãƒˆãƒ©ã‚¤ãƒˆã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®å–å¾—
         pointLight = GetComponent<Light>();
         if (pointLight == null)
         {
-            Debug.LogError("Light ƒRƒ“ƒ|[ƒlƒ“ƒg‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½Bƒ|ƒCƒ“ƒgƒ‰ƒCƒgƒIƒuƒWƒFƒNƒg‚ÉƒAƒ^ƒbƒ`‚µ‚Ä‚­‚¾‚³‚¢B");
+            Debug.LogError("Light ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚ãƒã‚¤ãƒ³ãƒˆãƒ©ã‚¤ãƒˆã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¢ã‚¿ãƒƒãƒã—ã¦ãã ã•ã„ã€‚");
             return;
         }
 
-        // ‰ŠúF‚Ìİ’è
-        pointLight.color = Color.red; // ‰ŠúF‚ğÔ‚Éİ’è
+        // åˆæœŸè‰²ã®è¨­å®š
+        pointLight.color = Color.red; // åˆæœŸè‰²ã‚’èµ¤ã«è¨­å®š
     }
 
     void Update()
     {
-        // SƒL[‚ª‰Ÿ‚³‚ê‚½‚çF‚ğØ‚è‘Ö‚¦AƒOƒ[ƒoƒ‹•Ï”‚ğXV‚·‚é
+        // Sã‚­ãƒ¼ãŒæŠ¼ã•ã‚ŒãŸã‚‰è‰²ã‚’åˆ‡ã‚Šæ›¿ãˆã€ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°ã‚’æ›´æ–°ã™ã‚‹
         if (Input.GetKeyDown(KeyCode.S))
         {
             isRed = !isRed;
@@ -31,16 +31,16 @@ public class SecondLightController : MonoBehaviour
 
     void UpdateLightColor()
     {
-        // isRed‚Ì’l‚É‰‚¶‚Äƒ‰ƒCƒg‚ÌF‚ğ•ÏX
+        // isRedã®å€¤ã«å¿œã˜ã¦ãƒ©ã‚¤ãƒˆã®è‰²ã‚’å¤‰æ›´
         if (isRed)
         {
-            pointLight.color = Color.red; // ÔF
-            GlobalVariables.isSecond = false; // ÔF‚É•ÏX‚µ‚½ê‡‚ÍisSecond‚ğfalse‚É‚·‚é
+            pointLight.color = Color.red; // èµ¤è‰²
+            GlobalVariables.isSecond = false; // èµ¤è‰²ã«å¤‰æ›´ã—ãŸå ´åˆã¯isSecondã‚’falseã«ã™ã‚‹
         }
         else
         {
-            pointLight.color = new Color(0.31f, 0.78f, 0.47f); // ƒGƒƒ‰ƒ‹ƒhƒOƒŠ[ƒ“
-            GlobalVariables.isSecond = true; // ƒGƒƒ‰ƒ‹ƒhƒOƒŠ[ƒ“‚É•ÏX‚µ‚½ê‡‚ÍisSecond‚ğtrue‚É‚·‚é
+            pointLight.color = new Color(0.31f, 0.78f, 0.47f); // ã‚¨ãƒ¡ãƒ©ãƒ«ãƒ‰ã‚°ãƒªãƒ¼ãƒ³
+            GlobalVariables.isSecond = true; // ã‚¨ãƒ¡ãƒ©ãƒ«ãƒ‰ã‚°ãƒªãƒ¼ãƒ³ã«å¤‰æ›´ã—ãŸå ´åˆã¯isSecondã‚’trueã«ã™ã‚‹
         }
     }
 }
