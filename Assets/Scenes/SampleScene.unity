@@ -2588,6 +2588,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4533467306480654177, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: secondQuestion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5332241995876772153, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: firstQuestion
       value: 0
@@ -2641,6 +2645,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+--- !u!1 &1031928302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1380983540410719880, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+  m_PrefabInstance: {fileID: 1031928301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1047205977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3050,6 +3059,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d086e04bd209b2a49bcfe8490884dfa2, type: 3}
   m_PrefabInstance: {fileID: 1170697093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1174461237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174461240}
+  - component: {fileID: 1174461239}
+  - component: {fileID: 1174461238}
+  m_Layer: 0
+  m_Name: QuizManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1174461238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174461237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d041664673546641869f40c4f944236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1174461239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174461237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc3634e52fafc74888d5fb615018264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second_obj: {fileID: 1031928302}
+  third_obj: {fileID: 0}
+--- !u!4 &1174461240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174461237}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -93.111534, y: 7.2435036, z: -239.43376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1224714367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5176,6 +5244,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: question box 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1380983540410719880, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533467306480654177, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: firstQuestion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -56.187557
@@ -5232,3 +5308,4 @@ SceneRoots:
   - {fileID: 294599130}
   - {fileID: 724666205}
   - {fileID: 1031928301}
+  - {fileID: 1174461240}
