@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 0}
   buttonNumber: 
+  collisionCooldown: 0.5
 --- !u!1 &6960186060415320168
 GameObject:
   m_ObjectHideFlags: 0
