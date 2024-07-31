@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
-    public float rotationSpeed = 90f; // 1•bŠÔ‚É90“x‰ñ“]
+    public float rotationSpeed = 90f; // 1ç§’é–“ã«90åº¦å›è»¢
     private bool isVerticalRotation = false;
 
     private bool contactLeft = false;
@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        // ‰ñ“]‚ªŠ®—¹‚µ‚Ä‚¢‚È‚¢ê‡‚ÍA‰ñ“]ˆ—‚ğs‚¤
+        // å›è»¢ãŒå®Œäº†ã—ã¦ã„ãªã„å ´åˆã¯ã€å›è»¢å‡¦ç†ã‚’è¡Œã†
         if (isRotating)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -33,7 +33,7 @@ public class CameraController : MonoBehaviour
             return;
         }
 
-        // ã‰º•ûŒü‚Ì‰ñ“]‚Ìˆ—
+        // ä¸Šä¸‹æ–¹å‘ã®å›è»¢ã®å‡¦ç†
         if (Input.GetKeyDown(KeyCode.I))
         {
             targetRotation = Quaternion.Euler(transform.eulerAngles.x - 90, transform.eulerAngles.y, transform.eulerAngles.z);
@@ -48,7 +48,7 @@ public class CameraController : MonoBehaviour
             isRotating = true;
         }
 
-        // ã‰º•ûŒü‚Ì‰ñ“]‚ª‚È‚¢ê‡‚Ì‚İ¶‰E•ûŒü‚Ì‰ñ“]‚ğ‹–‰Â
+        // ä¸Šä¸‹æ–¹å‘ã®å›è»¢ãŒãªã„å ´åˆã®ã¿å·¦å³æ–¹å‘ã®å›è»¢ã‚’è¨±å¯
         if (!isVerticalRotation)
         {
             if (Input.GetKeyDown(KeyCode.J))
@@ -64,7 +64,7 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        // ã‰º•ûŒü‚Ì‰ñ“]‚ğƒŠƒZƒbƒg
+        // ä¸Šä¸‹æ–¹å‘ã®å›è»¢ã‚’ãƒªã‚»ãƒƒãƒˆ
         if (Input.GetKey(KeyCode.N))
         {
             targetRotation = Quaternion.Euler(0, transform.eulerAngles.y, transform.eulerAngles.z);
@@ -72,7 +72,7 @@ public class CameraController : MonoBehaviour
             isRotating = true;
         }
 
-        // ã‰º¶‰E‚Ì‰ñ“]‚ğƒŠƒZƒbƒg
+        // ä¸Šä¸‹å·¦å³ã®å›è»¢ã‚’ãƒªã‚»ãƒƒãƒˆ
         if (Input.GetKey(KeyCode.M))
         {
             targetRotation = Quaternion.identity;
@@ -80,7 +80,7 @@ public class CameraController : MonoBehaviour
             isRotating = true;
         }
 
-        // “ü—Í‚Ìæ“¾iª«©¨ƒL[j
+        // å…¥åŠ›ã®å–å¾—ï¼ˆâ†‘â†“â†â†’ã‚­ãƒ¼ï¼‰
         float horizontal = 0f;
         float vertical = 0f;
 
@@ -101,14 +101,14 @@ public class CameraController : MonoBehaviour
             horizontal = 1f;
         }
 
-        // ˆÚ“®‚ÌŒvZ
+        // ç§»å‹•ã®è¨ˆç®—
         Vector3 movement = new Vector3(horizontal, 0, vertical) * moveSpeed * Time.deltaTime;
 
-        // ƒJƒƒ‰‚Ì…•½‰ñ“]‚ğl—¶‚µ‚ÄˆÚ“®•ûŒü‚ğŒvZ‚·‚é
+        // ã‚«ãƒ¡ãƒ©ã®æ°´å¹³å›è»¢ã‚’è€ƒæ…®ã—ã¦ç§»å‹•æ–¹å‘ã‚’è¨ˆç®—ã™ã‚‹
         Quaternion horizontalRotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         movement = horizontalRotation * movement;
 
-        // ÚG•ûŒü‚ÉŠî‚Ã‚¢‚ÄˆÚ“®‚ğ§ŒÀ
+        // æ¥è§¦æ–¹å‘ã«åŸºã¥ã„ã¦ç§»å‹•ã‚’åˆ¶é™
         if ((contactLeft && horizontal < 0) || (contactRight && horizontal > 0))
         {
             movement.x = 0;
@@ -119,7 +119,7 @@ public class CameraController : MonoBehaviour
             movement.z = 0;
         }
 
-        // ƒJƒƒ‰‚ÌˆÊ’u‚ğXV
+        // ã‚«ãƒ¡ãƒ©ã®ä½ç½®ã‚’æ›´æ–°
         transform.position += movement;
     }
 
@@ -129,28 +129,28 @@ public class CameraController : MonoBehaviour
         {
             Vector3 contactNormal = contact.normal;
 
-            // ƒJƒƒ‰‚Ì‰ñ“]‚ğl—¶‚µ‚ÄÚG•ûŒü‚ğXV
+            // ã‚«ãƒ¡ãƒ©ã®å›è»¢ã‚’è€ƒæ…®ã—ã¦æ¥è§¦æ–¹å‘ã‚’æ›´æ–°
             contactNormal = transform.InverseTransformDirection(contactNormal);
 
             if (Vector3.Dot(contactNormal, Vector3.left) > 0.5f)
             {
                 contactLeft = true;
-                Debug.Log("ÚG: ¶");
+                Debug.Log("æ¥è§¦: å·¦");
             }
             if (Vector3.Dot(contactNormal, Vector3.right) > 0.5f)
             {
                 contactRight = true;
-                Debug.Log("ÚG: ‰E");
+                Debug.Log("æ¥è§¦: å³");
             }
             if (Vector3.Dot(contactNormal, Vector3.forward) > 0.5f)
             {
                 contactForward = true;
-                Debug.Log("ÚG: ‘O");
+                Debug.Log("æ¥è§¦: å‰");
             }
             if (Vector3.Dot(contactNormal, Vector3.back) > 0.5f)
             {
                 contactBackward = true;
-                Debug.Log("ÚG: Œã‚ë");
+                Debug.Log("æ¥è§¦: å¾Œã‚");
             }
         }
     }
@@ -161,6 +161,6 @@ public class CameraController : MonoBehaviour
         contactRight = false;
         contactForward = false;
         contactBackward = false;
-        Debug.Log("ÚG‰ğœ");
+        Debug.Log("æ¥è§¦è§£é™¤");
     }
 }

@@ -2,24 +2,24 @@ using UnityEngine;
 
 public class GlobalVariables : MonoBehaviour
 {
-    // �v���C�x�[�g�ϐ�
+    // プライベート変数
     private static bool _isFirst = false;
     private static bool _isSecond = false;
     private static bool _isThird = false;
     private static bool _isClear = false;
 
-    // ���ʂ̃��\�b�h
+    // 共通のメソッド
     private static void SetValue(ref bool field, bool value, string fieldName)
     {
         if (field != value)
         {
             field = value;
             Debug.Log(fieldName + ": " + field);
-            PrintTrueCount(); // �ύX���������Ƃ���true�̐����o��
+            PrintTrueCount(); // 変更があったときにtrueの数を出力
         }
     }
 
-    // �v���p�e�B���g�p���ĕϐ��̕ύX���Ď�
+    // プロパティを使用して変数の変更を監視
     public static bool isFirst
     {
         get { return _isFirst; }
@@ -51,7 +51,7 @@ public class GlobalVariables : MonoBehaviour
         }
     }
 
-    // true�̐����J�E���g���ăR���\�[���ɏo�͂��郁�\�b�h
+    // trueの数をカウントしてコンソールに出力するメソッド
     public static void PrintTrueCount()
     {
         int trueCount = 0;
@@ -60,13 +60,13 @@ public class GlobalVariables : MonoBehaviour
         if (_isSecond) trueCount++;
         if (_isThird) trueCount++;
 
-        Debug.Log("���݉�������̐�: " + trueCount);
+        Debug.Log("現在解いた謎の数: " + trueCount);
 
-        // true�̐���3�ȏ�Ȃ�Q�[���N���A
+        // trueの数が3以上ならゲームクリア
         if (trueCount >= 3)
         {
             isClear = true;
-            Debug.Log("�Q�[���N���A");
+            Debug.Log("ゲームクリア");
         }
         else
         {
@@ -76,10 +76,10 @@ public class GlobalVariables : MonoBehaviour
 
     void Start()
     {
-        // ��������f�o�b�O�p�̃R�[�h���������Ƃ��ł��܂�
+        // 初期化やデバッグ用のコードを書くことができます
         Debug.Log("isFirst: " + isFirst);
         Debug.Log("isSecond: " + isSecond);
         Debug.Log("isThird: " + isThird);
-        PrintTrueCount(); // ������Ԃ�true�̐����o��
+        PrintTrueCount(); // 初期状態のtrueの数を出力
     }
 }
