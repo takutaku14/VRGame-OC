@@ -7,6 +7,7 @@ public class GlobalVariables : MonoBehaviour
     private static bool _isSecond = false;
     private static bool _isThird = false;
     private static bool _isClear = false;
+    private static bool _isInRoomA = true; // 新しい変数
 
     // 共通のメソッド
     private static void SetValue(ref bool field, bool value, string fieldName)
@@ -47,6 +48,27 @@ public class GlobalVariables : MonoBehaviour
             {
                 _isClear = value;
                 Debug.Log("isClear: " + _isClear);
+            }
+        }
+    }
+
+    public static bool isInRoomA // 新しいプロパティ
+    {
+        get { return _isInRoomA; }
+        set
+        {
+            if (_isInRoomA != value)
+            {
+                _isInRoomA = value;
+
+                if (_isInRoomA)
+                {
+                    Debug.Log("現在地：ルームA");
+                }
+                else {
+                    Debug.Log("現在地：ルームB");
+
+                }
             }
         }
     }
