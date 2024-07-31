@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class buttonActionListener : MonoBehaviour
+public class finalbuttonactionlistener : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI displayText;
     [SerializeField] string buttonNumber;
 
     private static string currentDisplay = "";
+    public static string nowNumbers = "";
 
-    // ã‚¤ãƒ³ã‚¿ãƒ¼ãƒãƒ«è¨­å®š
-    [SerializeField] private float collisionCooldown = 0.5f; // 1ç§’ã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒãƒ«
-    [SerializeField] private float clearDelay = 0.1f; // æ–‡å­—æ¶ˆå»ã®é…å»¶
+    // ƒCƒ“ƒ^[ƒoƒ‹İ’è
+    [SerializeField] private float collisionCooldown = 0.5f; // 1•b‚ÌƒCƒ“ƒ^[ƒoƒ‹
+    [SerializeField] private float clearDelay = 0.1f; // •¶šÁ‹‚Ì’x‰„
     private float lastCollisionTime = 0f;
 
     void OnCollisionEnter(Collision collision)
@@ -25,10 +26,11 @@ public class buttonActionListener : MonoBehaviour
             {
                 if (currentDisplay.Length < 4)
                 {
-                    currentDisplay += buttonNumber;
+                    nowNumbers += buttonNumber;
+                    currentDisplay += "*";
                     displayText.text = currentDisplay;
 
-                    // 4æ–‡å­—ãŒå…¥åŠ›ã•ã‚ŒãŸå ´åˆã€æ–‡å­—æ¶ˆå»ã®ã‚³ãƒ«ãƒ¼ãƒãƒ³ã‚’é–‹å§‹
+                    // 4•¶š‚ª“ü—Í‚³‚ê‚½ê‡A•¶šÁ‹‚ÌƒRƒ‹[ƒ`ƒ“‚ğŠJn
                     if (currentDisplay.Length == 4)
                     {
                         StartCoroutine(ClearTextAfterDelay());
@@ -39,25 +41,26 @@ public class buttonActionListener : MonoBehaviour
             }
         }
     }
-
     private IEnumerator ClearTextAfterDelay()
     {
-        // æŒ‡å®šã—ãŸé…å»¶æ™‚é–“å¾…ã¤
+        // w’è‚µ‚½’x‰„ŠÔ‘Ò‚Â
         yield return new WaitForSeconds(clearDelay);
 
-        // æ–‡å­—ã‚’æ¶ˆå»ã™ã‚‹
+        // •¶š‚ğÁ‹‚·‚é
+        nowNumbers = "";
         currentDisplay = "";
         displayText.text = currentDisplay;
     }
 
+    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
-
