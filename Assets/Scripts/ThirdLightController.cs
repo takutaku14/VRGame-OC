@@ -22,25 +22,25 @@ public class ThirdLightController : MonoBehaviour
     void Update()
     {
         // Tキーが押されたら色を切り替え、グローバル変数を更新する
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             isRed = !isRed;
             UpdateLightColor();
         }
     }
 
-    void UpdateLightColor()
+    public void UpdateLightColor()
     {
         // isRedの値に応じてライトの色を変更
         if (isRed)
         {
             pointLight.color = Color.red; // 赤色
-            GlobalVariables.isThird = false; // 赤色に変更した場合はisThirdをfalseにする
+            //GlobalVariables.isThird = false; // 赤色に変更した場合はisThirdをfalseにする
         }
         else
         {
             pointLight.color = new Color(0.31f, 0.78f, 0.47f); // エメラルドグリーン
-            GlobalVariables.isThird = true; // エメラルドグリーンに変更した場合はisThirdをtrueにする
+            //GlobalVariables.isThird = true; // エメラルドグリーンに変更した場合はisThirdをtrueにする
         }
     }
 }

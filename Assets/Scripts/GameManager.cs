@@ -5,12 +5,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
     public enum GameStatus {
-        first, 
+        first,
         second,
         third,
         clear,
         gameOver,
     }
+
+    // 正解数を明示するポイントライト
+    [SerializeField]
+    private PointLightController plc1;
+    [SerializeField]
+    private SecondLightController plc2;
+    [SerializeField]
+    private ThirdLightController plc3;
 
     public static GameManager Instance;
 
@@ -34,10 +42,6 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void Start() {
-
-    }
-
     public void InitGame() {
         //TODO 初期化処理
         status = GameStatus.first;
@@ -45,7 +49,7 @@ public class GameManager : MonoBehaviour {
     }
 
     //謎をクリアした時に呼び出す。
-    public void SolveQuestion() {
+    public void SolveQuestion(int num) {
         switch (status) {
             case GameStatus.first:
                 status = GameStatus.second;
@@ -74,12 +78,28 @@ public class GameManager : MonoBehaviour {
 
     public void ShowMenu() {
         Canvas canvas = menu.GetComponent<Canvas>();
-        if(canvas.enabled == true) {
+        if (canvas.enabled == true) {
             canvas.enabled = false;
             Debug.Log("メニュー非表示");
-        }else {
+        } else {
             canvas.enabled = true;
             Debug.Log("メニュー表示");
+        }
+    }
+
+    public void LightUp(int num) {
+        switch (num) {
+            case 1:
+                plc1.UpdateLightColor();
+                break;
+            case 2:
+                plc2.UpdateLightColor();
+                break;
+            case 3:
+                plc3.UpdateLightColor();
+                break;
+            default:
+                break;
         }
     }
 }
