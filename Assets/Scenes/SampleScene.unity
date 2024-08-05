@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: desk_right_side_of_TV
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6a6a8850d2cb534eb6f6ba0ec137226, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -329,6 +333,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ce8ac1f22a7b12e44ba4c646bed16d82, type: 3}
       propertyPath: m_Name
       value: lights_singles
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce8ac1f22a7b12e44ba4c646bed16d82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667840791404401056, guid: ce8ac1f22a7b12e44ba4c646bed16d82, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -436,6 +444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bundenban1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59f0db295fc12664a90ec14da71f1325, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -454,6 +466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 366393001}
     m_Modifications:
+    - target: {fileID: -8860803303127784597, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 438.9061
@@ -492,6 +508,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7268142583449907662, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7186149116460237056, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7048317258472459614, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5933836616141659751, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5869166703737725961, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5838969740171518243, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 745126838977778921, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
@@ -559,6 +603,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d086e04bd209b2a49bcfe8490884dfa2, type: 3}
       propertyPath: m_Name
       value: bundenban2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d086e04bd209b2a49bcfe8490884dfa2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -842,6 +890,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef8e8330fe098564d8d6721ff6d2c4aa, type: 3}
       propertyPath: m_Name
       value: sofa-table-sofa
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef8e8330fe098564d8d6721ff6d2c4aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1292,6 +1344,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 96a9b57c21e01b54ea93e08cc22c1279, type: 2}
+    - target: {fileID: -1185456069015991081, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -994366320468224792, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
       propertyPath: m_Name
       value: judgewall
@@ -1328,9 +1384,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6250026065656505873, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6412743435167755161, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844516104348023408, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7644924089414822798, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1486,6 +1550,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 59f0db295fc12664a90ec14da71f1325, type: 3}
       propertyPath: m_Name
       value: bundenban1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59f0db295fc12664a90ec14da71f1325, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1820,6 +1888,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bf0b16b346844304d8b14cc95c94da67, type: 2}
+    - target: {fileID: -1606549076445009759, guid: b41322ab525c7d34ab10d335aff4deaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1355923073535154810, guid: b41322ab525c7d34ab10d335aff4deaf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1988,6 +2060,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bf0b16b346844304d8b14cc95c94da67, type: 2}
+    - target: {fileID: -1606549076445009759, guid: b41322ab525c7d34ab10d335aff4deaf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1355923073535154810, guid: b41322ab525c7d34ab10d335aff4deaf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1995,6 +2071,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b41322ab525c7d34ab10d335aff4deaf, type: 3}
       propertyPath: m_Name
       value: desk-monitors
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b41322ab525c7d34ab10d335aff4deaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6105088420011689935, guid: b41322ab525c7d34ab10d335aff4deaf, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2146,6 +2226,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5ad6f345ab659ce4683068407feffbe4, type: 3}
       propertyPath: m_Name
       value: shels
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ad6f345ab659ce4683068407feffbe4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2417,9 +2501,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6250026065656505873, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6412743435167755161, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844516104348023408, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7644924089414822798, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2511,6 +2603,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a74b9c34fe27a3948b7dd9f60632af0c, type: 3}
       propertyPath: m_Name
       value: dell_monitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a74b9c34fe27a3948b7dd9f60632af0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2830,6 +2926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: desks_bywall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 280d0a330f2841b42a157760fe715463, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3111,6 +3211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bundenban2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d086e04bd209b2a49bcfe8490884dfa2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3231,6 +3335,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e6a6a8850d2cb534eb6f6ba0ec137226, type: 3}
       propertyPath: m_Name
       value: desk_right_side_of_TV
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6a6a8850d2cb534eb6f6ba0ec137226, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3373,6 +3481,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 702e3988484527a488dee7d3d8bf373e, type: 3}
       propertyPath: m_Name
       value: Washbasin-refrigerator-microwave
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 702e3988484527a488dee7d3d8bf373e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365359697081300432, guid: 702e3988484527a488dee7d3d8bf373e, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3521,6 +3633,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dbd7d5f2506b76748b1f799f43a6d6e4, type: 3}
       propertyPath: m_Name
       value: desk_byTV
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dbd7d5f2506b76748b1f799f43a6d6e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3675,6 +3791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Washbasin-refrigerator-microwave
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 702e3988484527a488dee7d3d8bf373e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1365359697081300432, guid: 702e3988484527a488dee7d3d8bf373e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3761,6 +3881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shels
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ad6f345ab659ce4683068407feffbe4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3822,6 +3946,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2eaf77223ff105842a74499682470c21, type: 3}
       propertyPath: m_Name
       value: air-con1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2eaf77223ff105842a74499682470c21, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4008,6 +4136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sofa-table-sofa
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef8e8330fe098564d8d6721ff6d2c4aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4172,6 +4304,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ce8ac1f22a7b12e44ba4c646bed16d82, type: 3}
       propertyPath: m_Name
       value: lights_singles
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce8ac1f22a7b12e44ba4c646bed16d82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667840791404401056, guid: ce8ac1f22a7b12e44ba4c646bed16d82, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -4412,6 +4548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: desks_bywall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 280d0a330f2841b42a157760fe715463, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4524,6 +4664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dell_monitor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a74b9c34fe27a3948b7dd9f60632af0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4542,6 +4686,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1705663778}
     m_Modifications:
+    - target: {fileID: -8860803303127784597, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 438.9061
@@ -4580,6 +4728,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7268142583449907662, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7048317258472459614, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5858219094635384987, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5838969740171518243, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5696792331677772790, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3900700334139180684, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 745126838977778921, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4bc19fed506f4d44985502422b7cda5e, type: 3}
@@ -4936,6 +5112,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2eaf77223ff105842a74499682470c21, type: 3}
       propertyPath: m_Name
       value: air-con1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2eaf77223ff105842a74499682470c21, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
