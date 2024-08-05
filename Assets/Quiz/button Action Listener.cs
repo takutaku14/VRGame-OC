@@ -5,38 +5,59 @@ using TMPro;
 
 public class buttonActionListener : MonoBehaviour
 {
-    //数値を変化させたいTextオブジェクトを入れる（boxScreenのtextオブジェクト入れてください）
     [SerializeField] private TextMeshProUGUI displayText;
-
-    //数値の設定(ボタンの数値)
     [SerializeField] string buttonNumber;
 
-    //現在の表示内容(staticだから共有されてる…？)←不安
     private static string currentDisplay = "";
 
-    //物体同士がぶつかったときに呼ばれる。
+    // インターバル設定
+    [SerializeField] private float collisionCooldown = 1f; // 1秒のインターバル
+    [SerializeField] private float clearDelay = 0.1f; // 文字消去の遅延
+    private float lastCollisionTime = 0f;
+
     void OnCollisionEnter(Collision collision)
     {
-        //プレイヤータグのついたものに衝突した際になるように設定。
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (currentDisplay.Length < 4)
+            float currentTime = Time.time;
+
+            if (currentTime - lastCollisionTime >= collisionCooldown)
             {
-                currentDisplay += buttonNumber;
-                displayText.text = currentDisplay;
+                if (currentDisplay.Length < 4)
+                {
+                    currentDisplay += buttonNumber;
+                    displayText.text = currentDisplay;
+
+                    // 4文字が入力された場合、文字消去のコルーチンを開始
+                    if (currentDisplay.Length == 4)
+                    {
+                        StartCoroutine(ClearTextAfterDelay());
+                    }
+                }
+
+                lastCollisionTime = currentTime;
             }
         }
     }
-    
-    // Start is called before the first frame update
-    void Start()
+
+    private IEnumerator ClearTextAfterDelay()
     {
-        
+        // 指定した遅延時間待つ
+        yield return new WaitForSeconds(clearDelay);
+
+        // 文字を消去する
+        currentDisplay = "";
+        displayText.text = currentDisplay;
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+
+    }
+
     void Update()
     {
-        
+
     }
 }
+
