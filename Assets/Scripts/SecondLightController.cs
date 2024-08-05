@@ -29,18 +29,18 @@ public class SecondLightController : MonoBehaviour
         }
     }
 
-    void UpdateLightColor()
+    public void UpdateLightColor()
     {
         // isRedの値に応じてライトの色を変更
         if (isRed)
         {
             pointLight.color = Color.red; // 赤色
-            GlobalVariables.isSecond = false; // 赤色に変更した場合はisSecondをfalseにする
+            //GlobalVariables.isSecond = false; // 赤色に変更した場合はisSecondをfalseにする
         }
         else
         {
             pointLight.color = new Color(0.31f, 0.78f, 0.47f); // エメラルドグリーン
-            GlobalVariables.isSecond = true; // エメラルドグリーンに変更した場合はisSecondをtrueにする
+            //GlobalVariables.isSecond = true; // エメラルドグリーンに変更した場合はisSecondをtrueにする
         }
     }
 }
