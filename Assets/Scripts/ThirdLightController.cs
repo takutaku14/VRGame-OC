@@ -22,7 +22,7 @@ public class ThirdLightController : MonoBehaviour
     void Update()
     {
         // Tキーが押されたら色を切り替え、グローバル変数を更新する
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             isRed = !isRed;
             UpdateLightColor();

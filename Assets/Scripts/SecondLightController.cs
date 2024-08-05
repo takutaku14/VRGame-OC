@@ -22,7 +22,7 @@ public class SecondLightController : MonoBehaviour
     void Update()
     {
         // Sキーが押されたら色を切り替え、グローバル変数を更新する
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             isRed = !isRed;
             UpdateLightColor();

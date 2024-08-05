@@ -22,7 +22,7 @@ public class PointLightController : MonoBehaviour
     void Update()
     {
         // Fキーが押されたら色を切り替え、グローバル変数を更新する
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             isRed = !isRed;
             UpdateLightColor();
