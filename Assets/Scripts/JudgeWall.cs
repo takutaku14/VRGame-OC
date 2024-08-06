@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class JudgeWall : MonoBehaviour
 {
+    [SerializeField]
+    private SmoothMoveOnTrigger door;
     private Renderer objectRenderer;
 
     void Start()
@@ -23,7 +25,7 @@ public class JudgeWall : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -39,5 +41,7 @@ public class JudgeWall : MonoBehaviour
             Debug.Log("isInRoomA toggled to: " + GlobalVariables.isInRoomA);
 
         }
+
+        door.SmoothCloseMove();
     }
 }

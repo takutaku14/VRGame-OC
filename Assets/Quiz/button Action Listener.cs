@@ -40,6 +40,26 @@ public class buttonActionListener : MonoBehaviour
         }
     }
 
+    public void InputNumber() {
+        float currentTime = Time.time;
+
+        if (currentTime - lastCollisionTime >= collisionCooldown) {
+            if (currentDisplay.Length < 4) {
+                currentDisplay += buttonNumber;
+                displayText.text = currentDisplay;
+
+                // 4文字が入力された場合、文字消去のコルーチンを開始
+                if (currentDisplay.Length == 4) {
+                    StartCoroutine(ClearTextAfterDelay());
+                }
+            }
+
+            lastCollisionTime = currentTime;
+        }
+
+        Debug.Log("数字を入力中");
+    }
+
     private IEnumerator ClearTextAfterDelay()
     {
         // 指定した遅延時間待つ
