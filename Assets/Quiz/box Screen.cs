@@ -42,10 +42,14 @@ public class boxScreen : MonoBehaviour
                     // 一致した場合の処理
                     //Debug.Log("表示されているテキストがanswerNumberと一致しました。");
                     GlobalVariables.isFirst = true;
+                    GameManager.Instance.LightUp(1);
+                    GlobalVariables.PrintTrueCount();
                 }
                 if(secondQuestion == true)
                 {
                     GlobalVariables.isSecond = true;
+                    GameManager.Instance.LightUp(2);
+                    GlobalVariables.PrintTrueCount();
                 }
             }
         }

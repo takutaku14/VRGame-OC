@@ -15,15 +15,15 @@ public class SmoothMoveOnTrigger : MonoBehaviour
         startPosition = transform.position;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") && !isMoving)
-        {
-            StartCoroutine(SmoothMove());
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Player") && !isMoving)
+    //    {
+    //        //StartCoroutine(SmoothMove());
+    //    }
+    //}
 
-    private IEnumerator SmoothMove()
+    public void SmoothMove()
     {
         Debug.Log("ドアを開けます");
         isMoving = true;
@@ -35,21 +35,38 @@ public class SmoothMoveOnTrigger : MonoBehaviour
         {
             transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / moveDuration);
             elapsedTime += Time.deltaTime;
-            yield return null;
+            //yield return null;
         }
 
         transform.position = endPosition;
 
         // 待機
-        yield return new WaitForSeconds(waitTime);
+        //yield return new WaitForSeconds(waitTime);
+
+        // 復帰移動
+        //elapsedTime = 0f;
+        //while (elapsedTime < moveDuration)
+        //{
+        //    transform.position = Vector3.Lerp(endPosition, startPosition, elapsedTime / moveDuration);
+        //    elapsedTime += Time.deltaTime;
+        //    //yield return null;
+        //}
+
+        //transform.position = startPosition;
+        //isMoving = false;
+    }
+
+    public void SmoothCloseMove() {
+        Debug.Log("ドアを閉めます");
+        Vector3 endPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + moveDistance);
+        float elapsedTime = 0f;
 
         // 復帰移動
         elapsedTime = 0f;
-        while (elapsedTime < moveDuration)
-        {
+        while (elapsedTime < moveDuration) {
             transform.position = Vector3.Lerp(endPosition, startPosition, elapsedTime / moveDuration);
             elapsedTime += Time.deltaTime;
-            yield return null;
+            //yield return null;
         }
 
         transform.position = startPosition;

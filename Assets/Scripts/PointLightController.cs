@@ -22,25 +22,27 @@ public class PointLightController : MonoBehaviour
     void Update()
     {
         // Fキーが押されたら色を切り替え、グローバル変数を更新する
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            isRed = !isRed;
             UpdateLightColor();
         }
     }
 
-    void UpdateLightColor()
+    public void UpdateLightColor()
     {
+        Debug.Log("ライトが点灯します。");
         // isRedの値に応じてライトの色を変更
-        if (isRed)
+        if (!isRed)
         {
             pointLight.color = Color.red; // 赤色
-            GlobalVariables.isFirst = false; // 赤色に変更した場合はisFirstをfalseにする
+            isRed = !isRed;
+            //GlobalVariables.isFirst = false; // 赤色に変更した場合はisFirstをfalseにする
         }
         else
         {
             pointLight.color = new Color(0.31f, 0.78f, 0.47f); // エメラルドグリーン
-            GlobalVariables.isFirst = true; // エメラルドグリーンに変更した場合はisFirstをtrueにする
+            isRed = !isRed;
+            //GlobalVariables.isFirst = true; // エメラルドグリーンに変更した場合はisFirstをtrueにする
         }
     }
 }
