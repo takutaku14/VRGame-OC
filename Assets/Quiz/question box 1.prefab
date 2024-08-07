@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5841578310926526837, guid: 31fca5f4f914e6c4ca1b8cbd54df206e, type: 3}
       propertyPath: answerNumber
-      value: 0526
+      value: 7526
       objectReference: {fileID: 0}
     - target: {fileID: 5841578310926526837, guid: 31fca5f4f914e6c4ca1b8cbd54df206e, type: 3}
       propertyPath: firstQuestion
