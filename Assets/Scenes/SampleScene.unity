@@ -5776,10 +5776,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: question box 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1380983540410719880, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4387602246501180506, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8048081e92a94bd4ea3e9c222d391828, type: 2}
+    - target: {fileID: 4533467306480654177, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: firstQuestion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55.620262
