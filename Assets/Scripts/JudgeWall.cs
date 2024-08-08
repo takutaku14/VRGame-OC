@@ -44,4 +44,12 @@ public class JudgeWall : MonoBehaviour
 
         door.SmoothCloseMove();
     }
+
+    public void OnTriggerEnter(Collider other) {
+        if(other.gameObject.CompareTag("player")) {
+            if (GlobalVariables.isClear) {
+                GameManager.Instance.GameClear();
+            }
+        }
+    }
 }

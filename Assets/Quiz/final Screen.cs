@@ -20,6 +20,8 @@ public class finalScreen : MonoBehaviour
         if(finalbuttonactionlistener.nowNumbers == answerNumber)
         {
             GlobalVariables.isThird = true;
+            GameManager.Instance.LightUp(3);
+            GlobalVariables.PrintTrueCount();
         }
     }
 }
