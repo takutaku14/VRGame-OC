@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private ThirdLightController plc3;
 
+    [SerializeField]
+    private TelePoint cleartp;
+
     public static GameManager Instance;
 
     private GameStatus status;
@@ -60,32 +63,31 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void GameClear() {
-        status = GameStatus.clear;
-
+    public void GameClear(GameObject g) {
         //TODO クリア処理
-        ShowMenu();
-        menu.SwitchMenu(1);
+
+        menu.showClearMenu();
+        cleartp.Teleport(g);
     }
 
-    public void GameOver() {
-        status = GameStatus.gameOver;
+    //public void GameOver() {
+    //    status = GameStatus.gameOver;
 
-        //TODO ゲームオーバー処理
-        ShowMenu();
-        menu.SwitchMenu(2);
-    }
+    //    //TODO ゲームオーバー処理
+    //    ShowMenu();
+    //    //menu.SwitchMenu(2);
+    //}
 
-    public void ShowMenu() {
-        Canvas canvas = menu.GetComponent<Canvas>();
-        if (canvas.enabled == true) {
-            canvas.enabled = false;
-            Debug.Log("メニュー非表示");
-        } else {
-            canvas.enabled = true;
-            Debug.Log("メニュー表示");
-        }
-    }
+    //public void ShowMenu() {
+    //    Canvas canvas = menu.GetComponent<Canvas>();
+    //    if (canvas.enabled == true) {
+    //        canvas.enabled = false;
+    //        Debug.Log("メニュー非表示");
+    //    } else {
+    //        canvas.enabled = true;
+    //        Debug.Log("メニュー表示");
+    //    }
+    //}
 
     public void LightUp(int num) {
         switch (num) {

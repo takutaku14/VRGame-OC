@@ -10,7 +10,7 @@ public class TelePoint : MonoBehaviour {
         z = transform.position.z;
     }
 
-    public void TeleportRoom(GameObject player) {
+    public void Teleport(GameObject player) {
         CharacterController cc = player.GetComponent<CharacterController>();
 
         if (cc != null) {

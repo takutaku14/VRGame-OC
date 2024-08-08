@@ -14,10 +14,10 @@ public class CheckWall : MonoBehaviour
             // GameStatus‚ªclear‚Ìê‡
             if (GlobalVariables.isClear)
             {
-                GameManager.Instance.GameClear();
+                GameManager.Instance.GameClear(other.gameObject);
             }
 
-            tp.TeleportRoom(other.gameObject);  // gameObject‚ğtpæ‚ÉˆÚ“®‚³‚¹‚éB
+            tp.Teleport(other.gameObject);  // gameObject‚ğtpæ‚ÉˆÚ“®‚³‚¹‚éB
             Debug.Log("Current Game Status: " + (GlobalVariables.isClear ? "Clear" : "Not Clear"));
         }
     }
