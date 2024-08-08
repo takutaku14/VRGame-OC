@@ -3459,6 +3459,14 @@ PrefabInstance:
       propertyPath: answerNumber
       value: 9473
       objectReference: {fileID: 0}
+    - target: {fileID: 452024284611297414, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: firstQuestion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452024284611297414, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: secondQuestion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1380983540410719880, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_Name
       value: question box 2
