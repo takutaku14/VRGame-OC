@@ -400,11 +400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5841578310926526837, guid: 31fca5f4f914e6c4ca1b8cbd54df206e, type: 3}
       propertyPath: firstQuestion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5841578310926526837, guid: 31fca5f4f914e6c4ca1b8cbd54df206e, type: 3}
       propertyPath: secondQuestion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

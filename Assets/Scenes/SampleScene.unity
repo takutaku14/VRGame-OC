@@ -2957,7 +2957,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1380983540410719880, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533467306480654177, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: firstQuestion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533467306480654177, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: secondQuestion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332241995876772153, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: firstQuestion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332241995876772153, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: secondQuestion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2965,11 +2981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1671507
+      value: 13.71
       objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -219.73294
+      value: -197.67
       objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3140,6 +3156,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 280d0a330f2841b42a157760fe715463, type: 3}
   m_PrefabInstance: {fileID: 1047427205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1067315904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dbd7d5f2506b76748b1f799f43a6d6e4, type: 3}
+  m_PrefabInstance: {fileID: 1124922541}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1076174142
 PrefabInstance:
@@ -3353,13 +3374,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dbd7d5f2506b76748b1f799f43a6d6e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1124922543}
   m_SourcePrefab: {fileID: 100100000, guid: dbd7d5f2506b76748b1f799f43a6d6e4, type: 3}
 --- !u!4 &1124922542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dbd7d5f2506b76748b1f799f43a6d6e4, type: 3}
   m_PrefabInstance: {fileID: 1124922541}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1124922543
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067315904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1140103687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8369181210873164147, guid: 1f6f0b15cc5a4f142b63c92f0d995c19, type: 3}
@@ -5885,6 +5930,14 @@ PrefabInstance:
       propertyPath: answerNumber
       value: 7526
       objectReference: {fileID: 0}
+    - target: {fileID: 452024284611297414, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: firstQuestion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452024284611297414, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
+      propertyPath: secondQuestion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1380983540410719880, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_Name
       value: question box 1
@@ -5919,7 +5972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.3
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 6102389759955147465, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6401,6 +6454,10 @@ PrefabInstance:
       propertyPath: buttonNumber
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1997899685366984630, guid: 65023d645fa51f5439ed7f4d4efd538c, type: 3}
+      propertyPath: firstQuestion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3019934695287259243, guid: 65023d645fa51f5439ed7f4d4efd538c, type: 3}
       propertyPath: buttonNumber
       value: 4
@@ -6435,7 +6492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769221702468834433, guid: 65023d645fa51f5439ed7f4d4efd538c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.2435036
+      value: 18.7
       objectReference: {fileID: 0}
     - target: {fileID: 4769221702468834433, guid: 65023d645fa51f5439ed7f4d4efd538c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6544,6 +6601,10 @@ PrefabInstance:
     - target: {fileID: 7932056764247735681, guid: 65023d645fa51f5439ed7f4d4efd538c, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: finalbuttonactionlistener, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206649738638008862, guid: 65023d645fa51f5439ed7f4d4efd538c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -83.7
       objectReference: {fileID: 0}
     - target: {fileID: 8268853098113977257, guid: 65023d645fa51f5439ed7f4d4efd538c, type: 3}
       propertyPath: buttonNumber

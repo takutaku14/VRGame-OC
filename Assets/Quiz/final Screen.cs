@@ -21,7 +21,7 @@ public class finalScreen : MonoBehaviour
         {
             GlobalVariables.isThird = true;
             GameManager.Instance.LightUp(3);
-            GlobalVariables.PrintTrueCount();
+            GlobalVariables.PrintTrueCount();  //gameClear
         }
     }
 }
