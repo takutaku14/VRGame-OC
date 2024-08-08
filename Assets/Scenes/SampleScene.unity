@@ -1249,22 +1249,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3169986882562221377, guid: d20310fa78124fc449802657ca29e223, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d20310fa78124fc449802657ca29e223, type: 3}
---- !u!114 &294599131 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3169986882562221377, guid: d20310fa78124fc449802657ca29e223, type: 3}
-  m_PrefabInstance: {fileID: 294599130}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb86fc2c0eaeacd47a9db02c46a426c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &313385177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2916,8 +2906,8 @@ MonoBehaviour:
   plc1: {fileID: 5408383031969657327}
   plc2: {fileID: 8931309130981167062}
   plc3: {fileID: 8931309130990372161}
-  cleartp: {fileID: 0}
-  menu: {fileID: 294599131}
+  cleartp: {fileID: 1114513720}
+  menu: {fileID: 1439803816}
 --- !u!4 &724666205
 Transform:
   m_ObjectHideFlags: 0

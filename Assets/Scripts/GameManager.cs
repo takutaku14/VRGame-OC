@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
     private void Awake() {
         if (Instance == null) {
             Instance = this;
-            menu.GetComponent<Canvas>().enabled = false;
+            //menu.GetComponent<Canvas>().enabled = false;
             DontDestroyOnLoad(this.gameObject);
         } else {
             Destroy(this.gameObject);

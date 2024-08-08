@@ -67,7 +67,7 @@ public class FPSController : MonoBehaviour {
 
         //debug用
         if (Input.GetKeyDown(KeyCode.M)) {
-            GameManager.Instance.ShowMenu();
+            //GameManager.Instance.ShowMenu();
             Debug.Log("Mが押された");
         }
     }

@@ -46,9 +46,10 @@ public class JudgeWall : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other) {
-        if(other.gameObject.CompareTag("player")) {
+        if(other.gameObject.CompareTag("Player")) {
             if (GlobalVariables.isClear) {
                 GameManager.Instance.GameClear(other.gameObject);
+                Debug.Log("移動した！！！！！");
             }
         }
     }
