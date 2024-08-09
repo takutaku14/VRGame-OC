@@ -5502,6 +5502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb86fc2c0eaeacd47a9db02c46a426c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalTime: {fileID: 0}
+  q1Time: {fileID: 0}
+  q2Time: {fileID: 0}
+  q3Time: {fileID: 0}
 --- !u!1001 &1441094211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7890,7 +7894,7 @@ PrefabInstance:
     - target: {fileID: 4387602246501180506, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8048081e92a94bd4ea3e9c222d391828, type: 2}
+      objectReference: {fileID: 2100000, guid: d90e90a8fe624e04496941c383db0108, type: 2}
     - target: {fileID: 4533467306480654177, guid: cc70954375c1e1f4ab20f474e3d00fac, type: 3}
       propertyPath: firstQuestion
       value: 1
