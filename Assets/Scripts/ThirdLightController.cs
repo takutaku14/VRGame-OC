@@ -32,15 +32,14 @@ public class ThirdLightController : MonoBehaviour
     public void UpdateLightColor()
     {
         // isRedの値に応じてライトの色を変更
-        if (isRed)
-        {
+        if (!isRed) {
             pointLight.color = Color.red; // 赤色
-            //GlobalVariables.isThird = false; // 赤色に変更した場合はisThirdをfalseにする
-        }
-        else
-        {
+            isRed = !isRed;
+            //GlobalVariables.isFirst = false; // 赤色に変更した場合はisFirstをfalseにする
+        } else {
             pointLight.color = new Color(0.31f, 0.78f, 0.47f); // エメラルドグリーン
-            //GlobalVariables.isThird = true; // エメラルドグリーンに変更した場合はisThirdをtrueにする
+            isRed = !isRed;
+            //GlobalVariables.isFirst = true; // エメラルドグリーンに変更した場合はisFirstをtrueにする
         }
     }
 }

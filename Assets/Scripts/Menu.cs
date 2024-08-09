@@ -16,9 +16,9 @@ public class Menu : MonoBehaviour{
     private TextMeshProUGUI q3Time;
 
     public void showClearMenu(float total, float q1, float q2, float q3) {
-        totalTime.text = total.ToString() + "s";
-        q1Time.text = q1.ToString() + "s";
-        q2Time.text = q2.ToString() + "s";
-        q3Time.text = q3.ToString() + "s";
+        totalTime.text = total.ToString("00.00") + "s";
+        q1Time.text = q1.ToString("00.00") + "s";
+        q2Time.text = q2.ToString("00.00") + "s";
+        q3Time.text = q3.ToString("00.00") + "s";
     }
 }

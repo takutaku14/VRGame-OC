@@ -47,7 +47,8 @@ public class finalbuttonactionlistener : MonoBehaviour
 
         if (currentTime - lastCollisionTime >= collisionCooldown) {
             if (currentDisplay.Length < 4) {
-                currentDisplay += buttonNumber;
+                nowNumbers += buttonNumber;
+                currentDisplay += "*";
                 displayText.text = currentDisplay;
 
                 // 4文字が入力された場合、文字消去のコルーチンを開始
