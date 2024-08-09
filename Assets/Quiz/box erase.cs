@@ -21,6 +21,7 @@ public class boxerase : MonoBehaviour
             {
                 if (!GlobalVariables.isInRoomA)
                 {
+                    buttonActionListener.currentDisplay = "";
                     Destroy(this.gameObject);
                 }
             }
@@ -31,6 +32,7 @@ public class boxerase : MonoBehaviour
             {
                 if (!GlobalVariables.isInRoomA)
                 {
+                    buttonActionListener.currentDisplay = "";
                     Destroy(this.gameObject);
                 }
             }
