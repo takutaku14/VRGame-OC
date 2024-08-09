@@ -3,9 +3,9 @@ using UnityEngine;
 public class GlobalVariables : MonoBehaviour
 {
     // プライベート変数
-    private static bool _isFirst = true;
-    private static bool _isSecond = true;
-    private static bool _isThird = true;
+    private static bool _isFirst = false;
+    private static bool _isSecond = false;
+    private static bool _isThird = false;
     private static bool _isClear = false;
     private static bool _isInRoomA = true; // 新しい変数
 

@@ -30,7 +30,7 @@ public class positionchange : MonoBehaviour
                 {
                     //if (this != null)
                     //{
-                        this.transform.position = new Vector3(x, y, z);
+                        transform.position = new Vector3(x, y, z);
                     //}
                     //else
                     //{
@@ -48,7 +48,7 @@ public class positionchange : MonoBehaviour
                 {
                     //if (this != null)
                     //{
-                        this.transform.position = new Vector3(x, y, z);
+                        transform.position = new Vector3(x, y, z);
                     //}
                     //else
                     //{
