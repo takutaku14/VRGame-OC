@@ -19,6 +19,7 @@ public class boxTopPart : MonoBehaviour
         {
             if(GlobalVariables.isFirst == true)
             {
+                //GameManager.Instance.SummonPaper(1);
                 Destroy(gameObject);
             }
         }
@@ -27,6 +28,7 @@ public class boxTopPart : MonoBehaviour
         {
             if(GlobalVariables.isSecond == true)
             {
+                //GameManager.Instance.SummonPaper(2);
                 Destroy(gameObject);
             }
         }

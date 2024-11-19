@@ -37,6 +37,13 @@ public class GameManager : MonoBehaviour {
         get { return menu; }
     }
 
+    [SerializeField]
+    GameObject paper1;
+    [SerializeField]
+    GameObject paper2;
+    [SerializeField]
+    private Vector3 pos;
+
     private float second;
     private int minute;
     private float totalTime = 0;
@@ -112,6 +119,26 @@ public class GameManager : MonoBehaviour {
                 break;
             default:
                 break;
+        }
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Alpha0)) {
+            SummonPaper(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9)) {
+            SummonPaper(2);
+        }
+    }
+    public void SummonPaper(int num) {
+        switch (num) {
+            case 1:
+                Instantiate(paper1, pos, Quaternion.identity);
+                break;
+            case 2:
+                Instantiate(paper2, pos, Quaternion.identity);
+                break;
+            default: break;
         }
     }
 }
